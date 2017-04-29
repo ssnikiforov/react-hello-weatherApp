@@ -14,17 +14,18 @@ let ReactDOM = require('react-dom');
  let {name} = obj; // name.obj = obj.name
  **/
 let {Route, Router, IndexRoute, hashHistory} = require('react-router');
+
+let About = require('About');
+let Examples = require('Examples');
 let Main = require('Main');
 let Weather = require('Weather');
-let About = require('About');
-
 
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
-            <Route path="about" component={About}>
+            <Route path="about" component={About}/>
+            <Route path="examples" component={Examples}/>
             <IndexRoute component={Weather}/> {/*render children components*/}
-            </Route>
         </Route>
     </Router>,
     document.getElementById('app')

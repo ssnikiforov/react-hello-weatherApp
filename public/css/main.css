@@ -3,3 +3,8 @@ textarea {
     width: 50%;
     margin: 5px 0;
 }
+
+a {
+    padding: 5px 5px;
+    margin: 0 5px;
+}

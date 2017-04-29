@@ -1,4 +1,5 @@
 let React = require('react');
+
 let Nav = require('Nav');
 
 let Main = React.createClass({

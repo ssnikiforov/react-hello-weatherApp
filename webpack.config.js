@@ -17,7 +17,7 @@ module.exports = {
             "node_modules"
         ],
         alias: {
-
+            Main: 'app/components/Main.jsx'
         },
         extensions: ['.js', '.jsx']
     },

@@ -17,8 +17,10 @@ module.exports = {
             "node_modules"
         ],
         alias: {
+            About: 'app/components/About.jsx',
             Main: 'app/components/Main.jsx',
-            Nav: 'app/components/Nav.jsx'
+            Nav: 'app/components/Nav.jsx',
+            Weather: 'app/components/Weather.jsx'
         },
         extensions: ['.js', '.jsx']
     },

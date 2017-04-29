@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "weather-app",
   "version": "1.0.0",
   "description": "Run server: `node server.js`",
   "main": "index.js",
@@ -21,13 +21,5 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "webpack": "^2.4.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssnikiforov/react-boilerplate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ssnikiforov/react-boilerplate/issues"
-  },
-  "homepage": "https://github.com/ssnikiforov/react-boilerplate#readme"
+  }
 }

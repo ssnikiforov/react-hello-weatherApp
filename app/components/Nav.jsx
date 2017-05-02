@@ -1,20 +1,20 @@
 let React = require('react');
 
-let {Link} = require('react-router'); // Link = react-router.Link
+let {Link, IndexLink} = require('react-router'); // Link = react-router.Link
 
 let Nav = React.createClass({
     render: function () {
         return (
             <div>
                 <h2>Nav Component</h2>
-                <Link to="/">Get Weather</Link>
-                <Link to="/about">About</Link>
-                <Link to="/examples">Examples</Link>
-                {/*<h2>React Weather</h2>*/}
-                {/*<h2>Get Weather</h2>*/}
-                {/*<h2>About</h2>*/}
-                {/*<h2>Examples</h2>*/}
-                {/*<h2>Stepan Nikiforov</h2>*/}
+                {/*т.к. мы используем IndexRoute, то здесь мы должны использовать IndexLink*/}
+                <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
+                <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
+                <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
+
+                {/*мы не используем стандартные анкоры потому,
+                что они не дают работать с activeClassName и activeStyle*/}
+                {/*<a href="/about">About</a> */}
             </div>
         );
     }

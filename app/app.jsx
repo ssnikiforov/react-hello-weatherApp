@@ -20,6 +20,9 @@ let Examples = require('Examples');
 let Main = require('Main');
 let Weather = require('Weather');
 
+// let city = 'Innopolis';
+// let temperature = 'Windy';
+
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>

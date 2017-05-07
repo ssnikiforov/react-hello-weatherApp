@@ -6,7 +6,7 @@ let WeatherResult = React.createClass({
 
         return (
             <div>
-                <p>It's {temperature} in {city}</p>
+                <p>It's {temperature} &#8451; in {city}.</p>
             </div>
         );
     }

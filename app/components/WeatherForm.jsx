@@ -13,7 +13,7 @@ let WeatherForm = React.createClass({
             updates.city = city;
         }
 
-        if (typeof temperature === "string") {
+        if (typeof temperature === "number") {
             updates.temperature = temperature;
         }
 

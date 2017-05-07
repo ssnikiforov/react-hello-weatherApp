@@ -5,38 +5,53 @@ let WeatherResult = require('WeatherResult');
 
 let Weather = React.createClass({
     getDefaultProps: function () {
-      return {
-        city: 'Innopolis',
-        temperature: 'Windy'
-      };
+        return {
+            city: 'Innopolis',
+            temperature: 'Windy'
+        };
     },
     getInitialState: function () {
         return {
-            city: this.props.city,
-            temperature: this.props.temperature
+            isLoading: false
         };
     },
     handleSearch: function (updates) {
         let _that = this;
 
+        this.setState({isLoading: true});
+
         openWeatherMap.getTemperature(updates.city).then(function (temperature) {
             _that.setState({
                 city: updates.city,
-                temperature: temperature
+                temperature: temperature,
+                isLoading: false
             });
         }).catch(function (errorMessage) {
+            _that.setState({
+                isLoading: false,
+                city: null,
+                temperature: null
+            });
             alert(errorMessage);
         });
     },
     render: function () {
-        let {city, temperature} = this.state;
+        let {isLoading, city, temperature} = this.state;
+
+        function renderMessage() {
+            if (isLoading) {
+                return <h3>Fetching weather...</h3>;
+            } else if (city && temperature) {
+                return <WeatherResult city={city} temperature={temperature}/>
+            }
+        }
 
         return (
-          <div>
-              <h3>Weather Component</h3>
-              <WeatherForm onSearch={this.handleSearch} />
-              <WeatherResult city={city} temperature={temperature}/>
-          </div>
+            <div>
+                <h3>Weather Component</h3>
+                <WeatherForm onSearch={this.handleSearch}/>
+                {renderMessage()}
+            </div>
         );
     }
 });

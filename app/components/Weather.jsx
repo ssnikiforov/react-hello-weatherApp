@@ -15,17 +15,18 @@ let Weather = React.createClass({
             temperature: this.props.temperature
         };
     },
-    handleUpdates: function (updates) {
+    handleSearch: function (updates) {
         this.setState(updates);
     },
     render: function () {
-        let city = this.state.city;
-        let temperature = this.state.temperature;
+        // let city = this.state.city;
+        // let temperature = this.state.temperature;
+        let {city, temperature} = this.state;
 
         return (
           <div>
               <h3>Weather Component</h3>
-              <WeatherForm onUpdates={this.handleUpdates} />
+              <WeatherForm onSearch={this.handleSearch} />
               <WeatherResult city={city} temperature={temperature}/>
           </div>
         );

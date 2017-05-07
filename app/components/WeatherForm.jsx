@@ -17,14 +17,14 @@ let WeatherForm = React.createClass({
             updates.temperature = temperature;
         }
 
-        this.props.onUpdates(updates);
+        this.props.onSearch(updates);
     },
     render: function () {
         return (
             <div>
                 <form onSubmit={this.onFormSubmit}>
                     <div>
-                        <input type="text" ref="city" placeholder="Enter the city"/>
+                        <input type="text" ref="city" placeholder="Enter the city name"/>
                     </div>
                     <div>
                         <button>Get Weather</button>

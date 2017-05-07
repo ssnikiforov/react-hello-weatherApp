@@ -35,7 +35,7 @@ module.exports = {
                     presets: ['react', 'es2015'] //this presets are already included via package.json
                 },
                 test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/
+                exclude: /(node_modules|bower_components|examples)/
             }
         ]
     }

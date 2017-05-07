@@ -1,4 +1,5 @@
 let React = require('react');
+let openWeatherMap = require('openWeatherMap');
 let WeatherForm = require('WeatherForm');
 let WeatherResult = require('WeatherResult');
 
@@ -16,11 +17,18 @@ let Weather = React.createClass({
         };
     },
     handleSearch: function (updates) {
-        this.setState(updates);
+        let _that = this;
+
+        openWeatherMap.getTemperature(updates.city).then(function (temperature) {
+            _that.setState({
+                city: updates.city,
+                temperature: temperature
+            });
+        }).catch(function (errorMessage) {
+            alert(errorMessage);
+        });
     },
     render: function () {
-        // let city = this.state.city;
-        // let temperature = this.state.temperature;
         let {city, temperature} = this.state;
 
         return (

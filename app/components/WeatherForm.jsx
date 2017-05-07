@@ -1,7 +1,7 @@
 let React = require('react');
 
 let WeatherForm = React.createClass({
-    onFormSubmit: function(e) { //TODO add weather API something there
+    onFormSubmit: function(e) {
         e.preventDefault();
 
         let city = this.refs.city.value;

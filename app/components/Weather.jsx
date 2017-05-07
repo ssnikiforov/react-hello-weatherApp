@@ -4,12 +4,6 @@ let WeatherForm = require('WeatherForm');
 let WeatherResult = require('WeatherResult');
 
 let Weather = React.createClass({
-    getDefaultProps: function () {
-        return {
-            city: 'Innopolis',
-            temperature: 'Windy'
-        };
-    },
     getInitialState: function () {
         return {
             isLoading: false

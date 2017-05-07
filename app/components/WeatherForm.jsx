@@ -21,7 +21,7 @@ let WeatherForm = React.createClass({
     },
     render: function () {
         return (
-            <div style={{background: "green"}}>
+            <div>
                 <form onSubmit={this.onFormSubmit}>
                     <div>
                         <input type="text" ref="city" placeholder="Enter the city"/>

@@ -6,7 +6,7 @@ let WeatherResult = React.createClass({
         let temperature = this.props.temperature;
 
         return (
-            <div style={{background: "blue"}}>
+            <div>
                 <p>It's {temperature} in {city}</p>
             </div>
         );

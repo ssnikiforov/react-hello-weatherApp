@@ -23,7 +23,7 @@ let Weather = React.createClass({
         let temperature = this.state.temperature;
 
         return (
-          <div style={{background: "red"}}>
+          <div>
               <h3>Weather Component</h3>
               <WeatherForm onUpdates={this.handleUpdates} />
               <WeatherResult city={city} temperature={temperature}/>

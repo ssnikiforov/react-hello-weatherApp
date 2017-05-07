@@ -2,4 +2,7 @@ Run server:
 `node server.js`
 
 Run webpack in watching mode: 
-`webpack -w`
+`./node_modules/.bin/webpack -wd`
+
+Execute similar js file:
+`node ./examples/example-arrow-functions.js`

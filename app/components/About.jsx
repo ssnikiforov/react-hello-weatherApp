@@ -20,7 +20,10 @@ let React = require('react');
 
 let About = () => { // stateless functional component with arrow functions
     return (
-        <h3>About Component</h3>
+        <div>
+            <h3>About</h3>
+            <p>Welcome to the About page</p>
+        </div>
     );
 };
 

@@ -11,10 +11,10 @@ app.use(function (request, response, next) {
   } else {
       response.redirect('http://' + request.hostname + request.url);
   }
-};
+});
 
 app.use(express.static('public'));
 
 app.listen(PORT, function () {
-    console.log('Server is started on port ' + port);
+    console.log('Server is started on port ' + PORT);
 });

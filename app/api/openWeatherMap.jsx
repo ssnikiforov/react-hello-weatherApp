@@ -21,7 +21,7 @@ module.exports = {
 
         return axios.get(requestUrl).then(function (response) { // success
             if (response.data.cod && response.data.message) { // but also checking for errors
-                throw new Error (response.data.message);
+                throw new Error(response.data.message);
             }
 
             return response.data.main.temp;

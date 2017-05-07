@@ -1,7 +1,7 @@
 let React = require('react');
 
 let WeatherForm = React.createClass({
-    onFormSubmit: function(e) {
+    onFormSubmit: function (e) {
         e.preventDefault();
 
         let city = this.refs.city.value;

@@ -5,8 +5,24 @@
  3. Run webpack in watching mode: `webpack -w`
  */
 
+let webpack = require('webpack'); // for using in plugins
+
 module.exports = {
-    entry: './app/app.jsx',
+    entry: [
+        'script-loader!jquery/dist/jquery.min.js', // script-loader! - it's a script, not a package for webpack
+        'script-loader!foundation-sites/dist/foundation.min.js',
+        './app/app.jsx'
+    ],
+    externals: {
+        jquery: 'jQuery'
+        /* none for foundation, because foundation attached to jQuery */
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            '$': 'jquery', // in code - replace variable '$' with module jquery
+            'jQuery': 'jquery'
+        })
+    ],
     output: {
         path: __dirname,
         filename: './public/bundle.js'

@@ -20,6 +20,12 @@ let Examples = require('Examples');
 let Main = require('Main');
 let Weather = require('Weather');
 
+// load foundation
+// css-loader! : ... and say, that in this file - css styles placed
+// style-loader! : ... using style-loader package
+require('style-loader!css-loader!foundation-sites/dist/foundation.min.css');
+$(document).foundation(); // call foundation
+
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
